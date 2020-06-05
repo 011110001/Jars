@@ -1,0 +1,22 @@
+automacro BotKiller {
+console /#110000465: \s*(\d+)/
+exclusive 1
+call {
+do ai manual
+$num = $.lastMatch1
+log [l] O Numero é $.lastMatch1
+log [l] O Numero é $.lastMatch1
+log [l] O Numero é $.lastMatch1
+pause 1
+do talk num $.lastMatch1
+pause 2
+do c @autoloot 25
+do sit
+pause 1
+do c @loja
+pause 2
+do talk resp 0
+pause 2
+do talk resp 3
+}
+}
